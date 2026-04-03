@@ -25,7 +25,7 @@ y_speed_player = 0
 
 ''' Coordenadas y Velocidad del jugador 2'''
 coord_x_player2 = 770 - player_height
-coord_y_player2 = 300-45
+coord_y_player2 = 300 - player_weight // 2
 y_speed_player2 = 0
 
 ''' Coordenadas de la pelota'''
@@ -34,12 +34,14 @@ pelota_y = 240
 pelota_speed_x = 3
 pelota_speed_y = 3
 
+pygame.time.delay(1000) # Se hace una pausa de 1 segundo para poder iniciar el juego con tranquilidad
+
 while not game_over:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
-            game_over = True
-            
+            game_over = True   
+        
         # Eventos Teclados
         if event.type == pygame.KEYDOWN: #Cuando se presiona una tecla
             # Jugador 1
@@ -95,6 +97,7 @@ while not game_over:
         game_over = True
     
     screen.fill(BLACK)
+    
     # Dibujamos los rectangulos
     jugador1 = pygame.draw.rect(screen, CYAN, (coord_x_player, coord_y_player, player_weight, player_height))
     jugador2 = pygame.draw.rect(screen, WHITE, (coord_x_player2, coord_y_player2, player_weight, player_height))
@@ -108,9 +111,9 @@ while not game_over:
     #lina inferior del campo de juego
     pygame.draw.line(screen, WHITE, (5, 495), (695, 495), 4) # x1 / y1 / x2 / y2 / grosor
     
-    # Arco del medio del juego
-                                    # x / y / ancho / largo / angulo de inicio / angulo de fin / grosor
-    pygame.draw.circle(screen, WHITE, (350, 240), 50, 4) #Aqui se dibuja un arco
+    # Circulo del medio del juego
+                                    # x / y / radio / grosor
+    pygame.draw.circle(screen, WHITE, (350, 240), 50, 4) 
     
     ''' Zona de campo de juego'''
     
