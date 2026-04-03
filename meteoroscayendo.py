@@ -6,7 +6,11 @@ BLACK = (0,0,0)
 class Meteor(pygame.sprite.Sprite): #Se crea la clase de la moneda, usando una subclase de Sprite
     def __init__(self): #Iniciamos la clase y la super clase
         super().__init__()
+<<<<<<< HEAD
         self.image = pygame.image.load("Pygame/imagenes/meteor.png").convert_alpha() #Se carga la imagen
+=======
+        self.image = pygame.image.load("imagenes/meteor.png").convert_alpha() #Se carga la imagen
+>>>>>>> 4228bfd659db06030c4fed7af2b1af6993a887c0
         self.rect =  self.image.get_rect() # Posicionamiento del Sprite
         # Creamos un encapsulamiento del movimiento de la moneda, para que el codigo sea mas ordenado y limpio
         # Este encapsulamiento hace que la moneda se mueva hacia abajo, simulando que esta cayendo
@@ -21,7 +25,11 @@ class Meteor(pygame.sprite.Sprite): #Se crea la clase de la moneda, usando una s
 class Player(pygame.sprite.Sprite):
     def __init__(self): #Iniciamos la clase y la super clase
         super().__init__()
+<<<<<<< HEAD
         self.image = pygame.image.load("Pygame/imagenes/player.png").convert_alpha() #Se carga la imagen
+=======
+        self.image = pygame.image.load("imagenes/player.png").convert_alpha() #Se carga la imagen
+>>>>>>> 4228bfd659db06030c4fed7af2b1af6993a887c0
         self.rect =  self.image.get_rect() # Posicionamiento del Sprite
         # Creamos un encapsulamiento del movimiento del jugador, para que el codigo sea mas ordenado y limpio
     def update(self):
@@ -38,7 +46,11 @@ clock = pygame.time.Clock()
 
 done = False
 
+<<<<<<< HEAD
 background = pygame.image.load("Pygame/imagenes/background.png").convert()
+=======
+background = pygame.image.load("imagenes/background.png").convert()
+>>>>>>> 4228bfd659db06030c4fed7af2b1af6993a887c0
 
 score = 0
 
